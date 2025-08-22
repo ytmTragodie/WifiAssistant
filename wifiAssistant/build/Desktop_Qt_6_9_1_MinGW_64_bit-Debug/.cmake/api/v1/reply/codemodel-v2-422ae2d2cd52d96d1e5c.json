@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-9b0fd83ed9c98d9d68cc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "wifiAssistant",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "wifiAssistant::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-wifiAssistant-Debug-0a4c3d31540cbc54da5d.json",
+					"name" : "wifiAssistant",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "wifiAssistant_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-wifiAssistant_autogen-Debug-6aeb6432e3cd37ccfdd8.json",
+					"name" : "wifiAssistant_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "wifiAssistant_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-wifiAssistant_autogen_timestamp_deps-Debug-55ab079ed11e814c1d3e.json",
+					"name" : "wifiAssistant_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "E:/Users/aesalienum/Desktop/Project/terminal/wifiAssistant/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug",
+		"source" : "E:/Users/aesalienum/Desktop/Project/terminal/wifiAssistant"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

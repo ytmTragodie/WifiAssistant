@@ -1,0 +1,19 @@
+# ninja log v6
+48	2638	7785929145696818	wifiAssistant_autogen/timestamp	82b7b2e6f0cbc009
+48	2638	7785929145696818	wifiAssistant_autogen/mocs_compilation.cpp	82b7b2e6f0cbc009
+48	2638	7785929145696818	E:/Users/aesalienum/Desktop/Project/terminal/wifiAssistant/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/wifiAssistant_autogen/timestamp	82b7b2e6f0cbc009
+48	2638	7785929145696818	E:/Users/aesalienum/Desktop/Project/terminal/wifiAssistant/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/wifiAssistant_autogen/mocs_compilation.cpp	82b7b2e6f0cbc009
+2665	6620	7785929147356941	CMakeFiles/wifiAssistant.dir/main.cpp.obj	8d2a07a728822cf4
+2682	7231	7785929147526784	CMakeFiles/wifiAssistant.dir/mainwindow.cpp.obj	6b3eb801e4124c3a
+48	424	7785931646869870	wifiAssistant_autogen/timestamp	82b7b2e6f0cbc009
+48	424	7785931646869870	wifiAssistant_autogen/mocs_compilation.cpp	82b7b2e6f0cbc009
+48	424	7785931646869870	E:/Users/aesalienum/Desktop/Project/terminal/wifiAssistant/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/wifiAssistant_autogen/timestamp	82b7b2e6f0cbc009
+48	424	7785931646869870	E:/Users/aesalienum/Desktop/Project/terminal/wifiAssistant/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/wifiAssistant_autogen/mocs_compilation.cpp	82b7b2e6f0cbc009
+442	4206	7785931650810201	CMakeFiles/wifiAssistant.dir/mainwindow.cpp.obj	6b3eb801e4124c3a
+25	1179	7785947703592770	wifiAssistant_autogen/timestamp	82b7b2e6f0cbc009
+25	1179	7785947703592770	wifiAssistant_autogen/mocs_compilation.cpp	82b7b2e6f0cbc009
+25	1179	7785947703592770	E:/Users/aesalienum/Desktop/Project/terminal/wifiAssistant/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/wifiAssistant_autogen/timestamp	82b7b2e6f0cbc009
+25	1179	7785947703592770	E:/Users/aesalienum/Desktop/Project/terminal/wifiAssistant/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/wifiAssistant_autogen/mocs_compilation.cpp	82b7b2e6f0cbc009
+1209	4352	7785947705572448	CMakeFiles/wifiAssistant.dir/serialportmanager.cpp.obj	ad246d29ff596701
+1195	4915	7785947705432451	CMakeFiles/wifiAssistant.dir/mainwindow.cpp.obj	6b3eb801e4124c3a
+1181	4946	7785947705292477	CMakeFiles/wifiAssistant.dir/wifiAssistant_autogen/mocs_compilation.cpp.obj	f782033727ff1c54

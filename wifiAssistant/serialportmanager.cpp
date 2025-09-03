@@ -1,15 +1,15 @@
 #include "serialportmanager.h"
 
 
-SerialPortManager::SerialPortManager(QObject * parent) : QObject(parent), serialPort(nullptr) {}
+SerialWorker::SerialWorker(QObject * parent) : QObject(parent), serialPort(nullptr) {}
 
-SerialPortManager::~SerialPortManager(){
+SerialWorker::~SerialWorker(){
     closePort();
 }
 
 
 
-void SerialPortManager::openPort(const QString &portName, qint32 baudRate,
+void SerialWorker::openPort(const QString &portName, qint32 baudRate,
               QSerialPort::DataBits dataBits,
               QSerialPort::StopBits stopBits,
               QSerialPort::Parity parity,
@@ -26,7 +26,7 @@ void SerialPortManager::openPort(const QString &portName, qint32 baudRate,
     serialPort->setStopBits(stopBits);
 
     if(serialPort->open(QIODevice::ReadWrite)){
-        connect(serialPort,&QSerialPort::readyRead,this,&SerialPortManager::handleReadyRead);
+        connect(serialPort,&QSerialPort::readyRead,this,&SerialWorker::handleReadyRead);
         emit(statusChanged(tr("已连接%1").arg(portName)));
         emit connectionChanged(true);
     }else{
@@ -40,7 +40,7 @@ void SerialPortManager::openPort(const QString &portName, qint32 baudRate,
 
 
 
-void SerialPortManager::closePort(){
+void SerialWorker::closePort(){
     if(serialPort && serialPort->isOpen()){
         serialPort->close();
         emit statusChanged("串口已断开");
@@ -53,7 +53,7 @@ void SerialPortManager::closePort(){
 }
 
 
-void SerialPortManager::writeData(const QByteArray &data){
+void SerialWorker::writeData(const QByteArray &data){
     if(serialPort && serialPort->isOpen()){
         qint64 bytesWritten = serialPort->write(data);
         if(bytesWritten==-1){
@@ -67,7 +67,7 @@ void SerialPortManager::writeData(const QByteArray &data){
     }
 }
 
-void SerialPortManager::handleReadyRead(){
+void SerialWorker::handleReadyRead(){
     if(serialPort && serialPort->isOpen()){
         QByteArray data = serialPort->readAll();
         if(!data.isEmpty()){
@@ -78,7 +78,7 @@ void SerialPortManager::handleReadyRead(){
     }
 }
 
-void SerialPortManager::handleError(QSerialPort::SerialPortError error){
+void SerialWorker::handleError(QSerialPort::SerialPortError error){
     if(error == QSerialPort::NoError) return;
     QString errorMsg;
     switch(error){
@@ -112,3 +112,17 @@ void SerialPortManager::handleError(QSerialPort::SerialPortError error){
         closePort();
     }
 }
+
+SerialPortManager::SerialPortManager(QWidget * parent):QWidget(parent){
+    worker = new SerialWorker;
+    worker->moveToThread(&workerThread);
+    connect(&workerThread,&QThread::finished,worker,&QObject::deleteLater);
+    workerThread.start();
+    refreshPorts();
+}
+
+SerialPortManager::~SerialPortManager(){
+    workerThread.quit();
+    workerThread.wait();
+}
+
